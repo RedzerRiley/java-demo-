@@ -20,12 +20,12 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Compile Java
+      - name: Compile Java (all files)
         run: |
           mkdir -p out
-          echo "Compiling sources..."
-          find ./src -name "*.java"
-          javac -d out $(find ./src -name "*.java")
+          echo "Compiling all Java files..."
+          find . -name "*.java"
+          javac -d out $(find . -name "*.java")
 
       - name: Run Program
-        run: java -cp out com.app.HelloApp
+        run: java -cp out SongLyricsApp
