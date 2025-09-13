@@ -19,7 +19,7 @@
       "command": "java",
       "args": [
         "-cp", "out",
-        "com.example.HelloApp"
+        "com.app.SongLyricsApp"
       ],
       "group": {
         "kind": "test",

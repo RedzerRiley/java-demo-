@@ -21,7 +21,11 @@ jobs:
           java-version: '17'
 
       - name: Compile Java
-        run: javac -d out $(find src -name "*.java")
+        run: |
+          mkdir -p out
+          echo "Compiling sources..."
+          find ./src -name "*.java"
+          javac -d out $(find ./src -name "*.java")
 
       - name: Run Program
-        run: java -cp out com.example.HelloApp
+        run: java -cp out com.app.HelloApp
