@@ -20,6 +20,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: List repo files
+        run: ls -R
+
       - name: Compile Java (all files)
         run: |
           mkdir -p out
