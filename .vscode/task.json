@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Java",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "-d", "out",
+        "-sourcepath", "src",
+        "src/com/example/HelloApp.java"
+      ],
+      "group": "build",
+      "problemMatcher": "$javac"
+    },
+    {
+      "label": "Run Java",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-cp", "out",
+        "com.example.HelloApp"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}
